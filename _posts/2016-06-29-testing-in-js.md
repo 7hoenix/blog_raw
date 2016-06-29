@@ -40,6 +40,7 @@ because you can follow the following pattern:
 ### In Ruby
 
 ```ruby
+
 # Setup
 board = [" ", " ", "X"]
 game = Game.new(board)
@@ -49,6 +50,7 @@ game.make_move(0, "X")
 
 # Expectation in RSpec
 expect(game.board).to eq(["X", " ", "X"])
+
 ```
 
 > We have a game object... and then we call a method on the game which changes the actual state of the game under test and then we assert that the change actually happened.
@@ -60,6 +62,7 @@ Then we know that we need to test each public method living on game.
 ### In Clojure
 
 ```clojure
+
 ; Setup
 (let [board [" " " " "X"]
       location 0
@@ -69,6 +72,7 @@ Then we know that we need to test each public method living on game.
 (should=
   ["X" " " "X"]
   (game/make-move board location player-mark)))
+
 ```
 
 > The biggest difference is that we are now passing in the board instead of storing it inside of game. This means that the game/make-move function is completely reusable (since it is a pure function).
