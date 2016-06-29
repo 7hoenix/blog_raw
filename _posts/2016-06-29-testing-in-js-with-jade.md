@@ -4,7 +4,7 @@ title: Testing in JS
 author: Jphoenx
 ---
 
-##Why Test?
+## Why Test?
 
 For a while now I've felt like the skill set today is every bit as much about
 testing as it is about writing actual code.
@@ -35,8 +35,9 @@ and wish that you were testing better.
 So how do you do it in JS? It makes decent sense to me an object oriented language
 because you can follow the following pattern:
 
-##OO Basic Example
-###In Ruby
+## OO Basic Example
+
+### In Ruby
 
 ```Ruby
 # Setup
@@ -50,14 +51,15 @@ game.make_move(0, "X")
 expect(game.board).to eq(["X", " ", "X"])
 ```
 
-####We have a game object... and then we call a method on the game which changes the
+#### We have a game object... and then we call a method on the game which changes the
 actual state of the game under test and then we assert that the change actually
 happened.
 
 Then we know that we need to test each public method living on game.
 
-##Functional Example
-###In Clojure
+## Functional Example
+
+### In Clojure
 
 ```Clojure
 ; Setup
@@ -71,9 +73,10 @@ Then we know that we need to test each public method living on game.
   (game/make-move board location player-mark)))
 ```
 
-####The biggest difference is that we are now passing in the board instead of storing
+#### The biggest difference is that we are now passing in the board instead of storing
 it inside of game. This means that the game/make-move function is completely reusable
 (since it is a pure function).
 
 ## Functional JS testing
+
 ### In Javascript
