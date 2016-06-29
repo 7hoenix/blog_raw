@@ -75,5 +75,5 @@ Then we know that we need to test each public method living on game.
 it inside of game. This means that the game/make-move function is completely reusable
 (since it is a pure function).
 
-##Functional JS testing
-###In Javascript
+## Functional JS testing
+### In Javascript
