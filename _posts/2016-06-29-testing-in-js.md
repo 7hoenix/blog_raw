@@ -35,11 +35,11 @@ and wish that you were testing better.
 So how do you do it in JS? It makes decent sense to me an object oriented language
 because you can follow the following pattern:
 
-## OO Basic Example
+## OO Example
 
 ### In Ruby
 
-```Ruby
+```ruby
 # Setup
 board = [" ", " ", "X"]
 game = Game.new(board)
@@ -51,9 +51,7 @@ game.make_move(0, "X")
 expect(game.board).to eq(["X", " ", "X"])
 ```
 
-#### We have a game object... and then we call a method on the game which changes the
-actual state of the game under test and then we assert that the change actually
-happened.
+> We have a game object... and then we call a method on the game which changes the actual state of the game under test and then we assert that the change actually happened.
 
 Then we know that we need to test each public method living on game.
 
@@ -61,7 +59,7 @@ Then we know that we need to test each public method living on game.
 
 ### In Clojure
 
-```Clojure
+```clojure
 ; Setup
 (let [board [" " " " "X"]
       location 0
@@ -73,10 +71,71 @@ Then we know that we need to test each public method living on game.
   (game/make-move board location player-mark)))
 ```
 
-#### The biggest difference is that we are now passing in the board instead of storing
-it inside of game. This means that the game/make-move function is completely reusable
-(since it is a pure function).
+> The biggest difference is that we are now passing in the board instead of storing it inside of game. This means that the game/make-move function is completely reusable (since it is a pure function).
 
-## Functional JS testing
+## Functional JS?
 
-### In Javascript
+I know how to test JS using the OO strategy from above. But after seeing how much
+better your code is when you write it from a functional perspective what I'd
+really like to do is **test JS in a functional way**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+asdf
