@@ -13,6 +13,12 @@ description: Resident Apprentice @ 8th Light
 # Flags below are optional
 #
 
+markdown: redcarpet
+redcarpet:
+  extension:
+    - fenced_code_blocks
+highlighter: pygments
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
