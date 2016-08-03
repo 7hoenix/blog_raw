@@ -4,10 +4,7 @@ title: Its not a Socket Wrapper... its a...
 author: Jphoenx
 ---
 
-## Socket Wrapper is exactly what it is but it doesn't imply a higher level of abstraction.
-
-You've probably heard before that one of the hardest things in coding is to come up
-with names.
+You've probably heard that one of the hardest things in programming is naming things.
 
 I never really understood exactly what that meant until working on my [Java Server](http://github.com/JPHoenx/javaServer)
 project at [8th Light](https://www.8thlight.com).
