@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Its not a Socket Wrapper... its a...
+title: Choosing Abstractions 1
 author: Jphoenx
 ---
 
