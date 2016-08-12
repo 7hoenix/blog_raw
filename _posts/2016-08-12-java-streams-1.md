@@ -17,8 +17,10 @@ need.
 
 I don't actually know but lets say 2000 bytes (remember this is just for the header).
 
-```Java
+```java
+
 BufferedInputStream header = new BufferedInputStream(InputStream in, Integer 2000);
+
 ```
 
 Now we can take header and do header stuff with it... convert it to a string and parse it.
@@ -31,7 +33,8 @@ Then we can discard that buffer since we have all of the information that we wan
 
 So maybe a working implementation looks like?
 
-```Java
+```java
+
 class RequestHandler {
   private InputStream in;
   private HashMap params;
@@ -50,6 +53,7 @@ class RequestHandler {
     // DO STRING MANIPULATIONS HERE AND PUT IN MAP
   }
 }
+
 ```
 
 That way we never can keep the initial input stream as-is and just work with stuff as we need it.
