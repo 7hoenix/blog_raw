@@ -4,6 +4,10 @@ title: Java Streams 1
 author: Jphoenx
 ---
 
+## Using BufferedInputStream
+
+**Note**: this is for my [Java Server](https://www.github.com/jphoenx/javaServer) project at [8thLight](https://www.8thlight.com).
+
 The constructor: `BufferedInputStream(InputStream in, int size)`
 
 Doesn’t mutate the input stream but will only read a certain amount of the bytes (based on the
