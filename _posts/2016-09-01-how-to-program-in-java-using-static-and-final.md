@@ -12,11 +12,11 @@ author: Jphoenx
 => have them take an object as the first argument to the method and return
 a new copy of that object.
 
-[TL;DR](#tl;dr)
-[See example](#example)
-[Learn about final](#final)
-[Learn about static](#static)
-[Skip ahead to the better way](#functionalJava "Functional Java")
+* [TL;DR](#tl;dr)
+* [See example](#example)
+* [Learn about final](#final)
+* [Learn about static](#static)
+* [Skip ahead to the better way](#functionalJava "Functional Java")
 
 ## <a name="example"></a>Basic Request Example
 
@@ -66,11 +66,11 @@ This is fine... and I've coded working systems using this very approach.
 
 But there is a better way.
 
-[TL;DR](#tl;dr)
-[See example](#example)
-[Learn about final](#final)
-[Learn about static](#static)
-[Skip ahead to the better way](#functionalJava "Functional Java")
+* [TL;DR](#tl;dr)
+* [See example](#example)
+* [Learn about final](#final)
+* [Learn about static](#static)
+* [Skip ahead to the better way](#functionalJava "Functional Java")
 
 ## <a name="final"></a>What does final mean?
 
@@ -156,11 +156,11 @@ private byte[] combine(byte[] original, byte[] addend) throws IOException {
 ```
 
 
-[TL;DR](#tl;dr)
-[See example](#example)
-[Learn about final](#final)
-[Learn about static](#static)
-[Skip ahead to the better way](#functionalJava "Functional Java")
+* [TL;DR](#tl;dr)
+* [See example](#example)
+* [Learn about final](#final)
+* [Learn about static](#static)
+* [Skip ahead to the better way](#functionalJava "Functional Java")
 
 
 ## <a name="static"></a>What does static mean?
@@ -219,11 +219,11 @@ And because its being called directly on the Request class... in order for it
 to know what request we are talking about... we have to pass it a request
 directly.
 
-[TL;DR](#tl;dr)
-[See example](#example)
-[Learn about final](#final)
-[Learn about static](#static)
-[Skip ahead to the better way](#functionalJava "Functional Java")
+* [TL;DR](#tl;dr)
+* [See example](#example)
+* [Learn about final](#final)
+* [Learn about static](#static)
+* [Skip ahead to the better way](#functionalJava "Functional Java")
 
 ## <a name="functionalJava"></a>Functional Java
 
@@ -299,8 +299,8 @@ public static Request addBodyContent(Request request, byte[] newContent) {
 
 ```
 
-[TL;DR](#tl;dr)
-[See example](#example)
-[Learn about final](#final)
-[Learn about static](#static)
-[Skip ahead to the better way](#functionalJava "Functional Java")
+* [TL;DR](#tl;dr)
+* [See example](#example)
+* [Learn about final](#final)
+* [Learn about static](#static)
+* [Skip ahead to the better way](#functionalJava "Functional Java")
