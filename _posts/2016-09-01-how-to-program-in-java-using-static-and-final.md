@@ -8,11 +8,14 @@ AKA: Functional Java
 
 ## <a name="tl;dr"></a>TL;DR
 
-1) Use final on your data structures to lock down your data:
-=> make copies of things as you go to change data.
-2) Use static on your methods to make them functional:
-=> have them take an object as the first argument to the method and return
-a new copy of that object.
+1. Use final on your data structures to lock down your data
+  * Make copies of things as you go to change data.
+
+2. Use static on your methods to make them functional
+  * The first argument to the method is the object in question.
+
+3. If using both and you want to change the underlying data structure.
+  * The return type is a new updated version of the object in question.
 
 * [TL;DR](#tl;dr)
 * [See example](#example)
