@@ -4,6 +4,8 @@ title: How to Program in Java using Static and Final
 author: Jphoenx
 ---
 
+AKA: Functional Java
+
 ## <a name="tl;dr"></a>TL;DR
 
 1) Use final on your data structures to lock down your data:
