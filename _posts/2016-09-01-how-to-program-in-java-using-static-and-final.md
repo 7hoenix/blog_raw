@@ -79,7 +79,7 @@ But there is a better way.
 
 ## <a name="final"></a>What does final mean?
 
-Final means that a value cannot be changed after you **finish** make it.
+Final means that a value cannot be changed after you **finish** making it.
 
 Back to our Request example.
 
@@ -123,7 +123,7 @@ Ok... so the way to construct a basic Request has not changed yet:
 
 byte[] header = "POST /users HTTP/1.1\r\n\r\n".getBytes();
 byte[] body = "".getBytes();
-Request request = new Request(header, body);
+Request currentRequest = new Request(header, body);
 
 ```
 
@@ -135,13 +135,8 @@ new object like so:
 
 ```java
 
-// WE ALREADY DID THIS PART
-byte[] header = "POST /users HTTP/1.1\r\n\r\n".getBytes();
-byte[] body = "".getBytes();
-Request request = new Request(header, body);
-
-byte[] currentHeader = request.getHeader();
-byte[] currentBody = request.getBody();
+byte[] currentHeader = currentRequest.getHeader();
+byte[] currentBody = currentRequest.getBody();
 byte[] updatedBody = combine(currentBody, "data: pie".getBytes());
 Request updatedRequest = new Request(currentHeader, updatedBody);
 
