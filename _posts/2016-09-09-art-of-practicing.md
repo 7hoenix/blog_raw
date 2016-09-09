@@ -24,12 +24,13 @@ She was talking about how how High Expertise correlates to cognitive processing 
 
 She was describing three buckets of expertise in order to learn any particular domain.
 
-                                  MOST PEOPLE PILE UP IN BUCKET B.
+```text
+            MOST PEOPLE PILE UP IN BUCKET B.
 
-                            A -----------------> B ------------------> C
+      A -----------------> B ------------------> C
 
-                        Can't do        Can do with effort      Can do with little / no effort
-
+  Can't do        Can do with effort      Can do with little / no effort
+```
 
 > Bucket A: Can't do the activity at all (the thing could literally be written in Chinese).
 
