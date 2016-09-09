@@ -58,9 +58,10 @@ recreate it on an adjacent board.
 Heres where it gets interesting:
 
 ```text
-When they had Chess boards with positions from real games the Grandmasters would be able to recreate it significantly
-faster than the experts, but when the boards were just pieces placed at random both of them took approximately
-the same amount of time.
+When they had Chess boards with positions from real games the
+Grandmasters would be able to recreate it significantly faster
+than the experts, but when the boards were just pieces placed at
+random both of them took approximately the same amount of time.
 ```
 
 The grandmasters had more patterns chunked than the experts... and when they could use these patterns they could
@@ -76,4 +77,4 @@ Katrina also mentioned that the perfect size of a subskill that you should be wo
 of 45 - 90 minutes each. If you work on things in those blocks and can practice and acquire the skill in that amount
 of time then you are well on your way.
 
-More to come.
+**More to come.**
