@@ -2,11 +2,12 @@
 layout: post
 title: How to Program in Java using Static and Final
 author: Jphoenx
+toc: true
 ---
 
 AKA: Functional Java
 
-## <a name="tl;dr"></a>TL;DR
+## TL;DR
 
 1. Use final on your data structures to lock down your data
   * Make copies of things as you go to change data.
@@ -17,17 +18,13 @@ AKA: Functional Java
 3. If using both and you want to change the underlying data structure.
   * The return type is a new updated version of the object in question.
 
-* [TL;DR](#tl;dr)
-* [See example](#example)
-* [Learn about final](#final)
-* [Learn about static](#static)
-* [Skip ahead to the better way](#functionalJava "Functional Java")
+<h4 class="nav-anchor">See example</h4>
 
-## <a name="example"></a>Basic Request Example
+## Basic Example
 
 To use an example from an HTTP Server (a pretty common example in Java-land):
 
-```java
+{% highlight java %}
 
 class Request {
     private byte[] header;
@@ -51,12 +48,12 @@ class Request {
     }
 }
 
-```
+{% endhighlight %}
 
 Now if we wanted to use the isValid() method on Request we would first have to
 create a new one and then we could use it.
 
-```java
+{% highlight java %}
 
 byte[] header = "GET /images HTTP/1.1\r\n\r\n".getBytes();
 byte[] body = "".getBytes();
@@ -64,20 +61,15 @@ Request request = new Request(header, body);
 if (!request.isValid()) {
     // DO WORK WITH REQUEST
 }
-
-```
+{% endhighlight %}
 
 This is fine... and I've coded working systems using this very approach.
 
 But there is a better way.
 
-* [TL;DR](#tl;dr)
-* [See example](#example)
-* [Learn about final](#final)
-* [Learn about static](#static)
-* [Skip ahead to the better way](#functionalJava "Functional Java")
+<h4 class="nav-anchor">Learn about Final</h4>
 
-## <a name="final"></a>What does final mean?
+## What does final mean?
 
 Final means that a value cannot be changed after you **finish** making it.
 
@@ -85,7 +77,7 @@ Back to our Request example.
 
 NOTE that the two fields at the top now have **final** in front of them.
 
-```java
+{% highlight java %}
 
 class Request {
     private final byte[] header;
@@ -109,7 +101,7 @@ class Request {
     }
 }
 
-```
+{% endhighlight %}
 
 The way that this works is that header and body get assigned inside of the
 constructor and then they cannot be mutated at all.
@@ -119,13 +111,13 @@ changing later... say for concurrency, testing, or your sanity.
 
 Ok... so the way to construct a basic Request has not changed yet:
 
-```java
+{% highlight java %}
 
 byte[] header = "POST /users HTTP/1.1\r\n\r\n".getBytes();
 byte[] body = "".getBytes();
 Request currentRequest = new Request(header, body);
 
-```
+{% endhighlight %}
 
 But oh no... we forgot to parse the body in that request... and now it is
 final and we can't change it...
@@ -133,18 +125,18 @@ final and we can't change it...
 Well if you ever wanted to change the value of one of those. You would create a
 new object like so:
 
-```java
+{% highlight java %}
 
 byte[] currentHeader = currentRequest.getHeader();
 byte[] currentBody = currentRequest.getBody();
 byte[] updatedBody = combine(currentBody, "data: pie".getBytes());
 Request updatedRequest = new Request(currentHeader, updatedBody);
 
-```
+{% endhighlight %}
 
 And then the combine method:
 
-```java
+{% highlight java %}
 
 private byte[] combine(byte[] original, byte[] addend) throws IOException {
     ByteArrayOutputStream combined = new ByteArrayOutputStream();
@@ -153,17 +145,11 @@ private byte[] combine(byte[] original, byte[] addend) throws IOException {
     return combined.toByteArray();
 }
 
-```
+{% endhighlight %}
 
+<h4 class="nav-anchor">Learn about Static</h4>
 
-* [TL;DR](#tl;dr)
-* [See example](#example)
-* [Learn about final](#final)
-* [Learn about static](#static)
-* [Skip ahead to the better way](#functionalJava "Functional Java")
-
-
-## <a name="static"></a>What does static mean?
+## What does static mean?
 
 Static denotes that a particular field or method should be a class level field
 or method.
@@ -173,7 +159,7 @@ Let's look at our example again.
 NOTE that the isValid method is now static AND takes an argument of type
 Request.
 
-```java
+{% highlight java %}
 
 class Request {
     private byte[] header;
@@ -197,12 +183,12 @@ class Request {
     }
 }
 
-```
+{% endhighlight %}
 
 Since isValid now takes in a request object we have to change the way we
 call it slightly:
 
-```java
+{% highlight java %}
 
 byte[] header = "GET /images HTTP/1.1\r\n\r\n".getBytes();
 byte[] body = "".getBytes();
@@ -211,7 +197,7 @@ if (!Request.isValid(request)) {
     // DO WORK WITH REQUEST
 }
 
-```
+{% endhighlight %}
 
 The static part makes it so that we call isValid directly on the Request class.
 
@@ -219,17 +205,13 @@ And because its being called directly on the Request class... in order for it
 to know what request we are talking about... we have to pass it a request
 directly.
 
-* [TL;DR](#tl;dr)
-* [See example](#example)
-* [Learn about final](#final)
-* [Learn about static](#static)
-* [Skip ahead to the better way](#functionalJava "Functional Java")
+<h4 class="nav-anchor">Skip ahead to better way</h4>
 
-## <a name="functionalJava"></a>Functional Java
+## Functional Java
 
 Completed code using both approaches together:
 
-```java
+{% highlight java %}
 
 class Request {
     private final byte[] header;
@@ -253,11 +235,11 @@ class Request {
     }
 }
 
-```
+{% endhighlight %}
 
 And the invoking code:
 
-```java
+{% highlight java %}
 
 byte[] header = "GET /images HTTP/1.1\r\n\r\n".getBytes();
 byte[] body = "".getBytes();
@@ -266,7 +248,7 @@ if (!Request.isValid(request)) {
     // DO WORK WITH REQUEST
 }
 
-```
+{% endhighlight %}
 
 ### Lock down your data structures using final.
 
@@ -283,7 +265,7 @@ new copy of that object and return it.
 
 MOAR EXAMPLES
 
-```java
+{% highlight java %}
 
 public static Map parseHeaders(Request request) {
     // GO THROUGH THE REQUEST HEADER AND PARSE OUT THINGS LIKE
@@ -297,10 +279,4 @@ public static Request addBodyContent(Request request, byte[] newContent) {
     return new Request(request.getHeader(), updatedBody);
 }
 
-```
-
-* [TL;DR](#tl;dr)
-* [See example](#example)
-* [Learn about final](#final)
-* [Learn about static](#static)
-* [Skip ahead to the better way](#functionalJava "Functional Java")
+{% endhighlight %}

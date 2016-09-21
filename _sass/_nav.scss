@@ -1,0 +1,45 @@
+.section-nav {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    margin: 0;
+    border-right: 1px solid gray;
+    font-size: 11pt;
+  }
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+// Only display H4's in nav.
+.toc-entry.toc-h4
+{}
+.toc-entry.toc-h1,
+.toc-entry.toc-h2,
+.toc-entry.toc-h3,
+.toc-entry.toc-h5,
+.toc-entry.toc-h6
+{
+  display: none;
+}
+
+// Make nav-anchor (which should be on H4 elements) be invisible.
+.nav-anchor {
+  visibility: hidden;
+}
+
+.nav-padding {
+  padding-top: 45px;
+}
+
+
