@@ -3,11 +3,12 @@ layout: blog
 ---
 
 <article class="post">
+  <script src="/scripts/nav.js"></script>
  <div class="space-extra-small">
  </div>
 
-  <div class="entry">
-    {{ content }}
+  <div id="currentEntry" class="entry">
+    {{ content | toc }}
   </div>
 
   {% include disqus.html %}

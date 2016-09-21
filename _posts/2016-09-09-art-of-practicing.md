@@ -2,7 +2,10 @@
 layout: post
 title: The art of practicing 1
 author: Jphoenx
+toc: true
 ---
+
+<h4 class="nav-anchor">Chunking</h4>
 
 ## Chunking
 
@@ -43,6 +46,8 @@ This is the dream. You no longer have to think about the domain at all you can j
 If you are reading this blog... then its safe to assume that you know how to go from Bucket A to Bucket B...
 sure this process can *always* be optimized... but the real question is:
 
+<h4 class="nav-anchor">Pattern Recognition</h4>
+
 ## Pattern recognition
 
 In [the Art of Learning](https://www.amazon.com/Art-Learning-Journey-Optimal-Performance/dp/B00JE2WEEK),
@@ -68,6 +73,8 @@ The grandmasters had more patterns chunked than the experts... and when they cou
 perform the task faster than the experts.
 
 But when it was just random positions their was no difference between the two.
+
+<h4 class="nav-anchor">How do you go from Bucket B to Bucket C?</h4>
 
 ## How do you go from Bucket B to Bucket C?
 
