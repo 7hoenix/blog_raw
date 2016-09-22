@@ -1,15 +1,16 @@
 ---
 ---
 
-window.addEventListener('scroll', (ev) ->
+window.addEventListener 'scroll', (e) => checkDistance(e)
+window.addEventListener 'touchmove', (e) => checkDistance(e)
+window.addEventListener 'gesturechange', (e) => checkDistance(e)
+
+checkDistance = () ->
   introContainerDistance = document.getElementsByClassName("intro-header")[0].clientHeight
   smallSpaceDistance = document.getElementsByClassName("space-extra-small")[0].clientHeight
   navContainerDistance = smallSpaceDistance + introContainerDistance
   distanceToTop = window.pageYOffset
-  console.log("nav: " + navContainerDistance)
-  console.log("distance to top: " + distanceToTop)
   toggleElements(distanceToTop, navContainerDistance)
-)
 
 toggleElements = (distanceToTop, navContainerDistance) ->
   nav = document.getElementsByClassName("section-nav")[0]
