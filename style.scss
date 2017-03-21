@@ -293,4 +293,13 @@ footer {
 @import "jekyll-mono";
 
 // JPHoenx addition
+$medium: 700px;
+
+@media (max-width: $medium) {
+  body {
+    background-size: cover;
+    background-image: url('{{ site.baseurl }}/images/mobile-welcome-screen.png');
+  }
+}
+
 @import "nav";
